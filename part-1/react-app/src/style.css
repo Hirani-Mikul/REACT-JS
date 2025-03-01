@@ -1,0 +1,51 @@
+:root {
+  font-size: 62.5%;
+  background-color: #ecf5ff;
+}
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  width: 50%;
+  border: 0.5rem solid blue;
+  padding: 1rem;
+}
+li {
+  border-bottom: 0.1rem solid green;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 1.7rem;
+}
+
+/* LOADER */
+
+#loader {
+  border: 1.6rem solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid #56a5eb;
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
