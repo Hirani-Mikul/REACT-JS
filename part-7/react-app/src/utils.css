@@ -1,0 +1,39 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.space-evenly {
+  justify-content: space-evenly;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.fas {
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.pointer {
+  cursor: pointer;
+}
+.cursor-default {
+  cursor: default;
+}
+.fas:hover {
+  color: rgb(177, 176, 176);
+}

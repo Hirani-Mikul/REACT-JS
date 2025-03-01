@@ -1,0 +1,239 @@
+:root {
+  font-size: 62.5%;
+  background-color: #eee;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* font-family: 'Times New Roman', Times, serif; */
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 1.6rem;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* HEADER STYLING */
+header {
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 7vh;
+  background-color: #4a8270;
+}
+.left-nav {
+  flex: 2;
+  margin-left: 1rem;
+}
+.right-nav {
+  flex: 1;
+}
+.opponent {
+  width: 100%;
+  margin-left: 1rem;
+}
+.opponent-img {
+  margin-right: 1rem;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+.opponent-img:hover {
+  opacity: 0.6;
+}
+.opponent-info:hover {
+  color: rgb(230, 225, 225);
+}
+.opponent-info span {
+  display: block;
+  color: rgb(226, 226, 226);
+  margin-top: 0.2rem;
+}
+.right-nav .chat-page-menu {
+  position: relative;
+}
+
+.chat-page-menu-item {
+  border-radius: 0.5rem;
+  width: 15rem;
+  height: 18rem;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: absolute;
+  color: rgb(66, 66, 66);
+  background-color: white;
+  font-weight: normal;
+  right: 200%;
+  top: 0;
+  z-index: 1;
+  transform: translateX(122%) scale(1, 0);
+  transition: transform 0.3s ease-in-out;
+}
+.chat-page-menu-item > * {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.chat-page-menu-item > *:hover {
+  color: black;
+}
+.showMenu .chat-page-menu-item {
+  transform: translateX(0%) scale(1);
+}
+
+/* MESSAGE AREA STYLING */
+.message-area {
+  background-color: grey;
+  width: 100%;
+  height: 93vh;
+  padding-bottom: 6vh;
+  /* overflow-y: scroll; */
+  overflow: auto;
+}
+
+/* MESSAGECARD STYLING */
+
+.message-card {
+  margin: 1rem;
+  /* margin-left: auto; */
+  overflow: hidden;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.message-card .message-text {
+  font-size: 1.5rem;
+}
+.message-card .time-span {
+  display: block;
+  color: rgb(163, 161, 161);
+  margin-left: auto;
+  margin-top: 0.2rem;
+}
+.opponentStyling {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: rgb(24, 28, 243);
+}
+.delete_message {
+  position: absolute;
+  pointer-events: none;
+  transform: translateX(140%);
+  right: 1%;
+  top: 0;
+  transition: all 200ms ease-in-out;
+}
+.message-card:hover .delete_message {
+  transform: translateX(0%);
+  pointer-events: all;
+}
+/* FORM SYTLING */
+.message-form {
+  display: flex;
+  width: 100vw;
+  height: 6vh;
+  max-width: 80rem;
+  position: fixed;
+  bottom: 0.5rem;
+}
+.message-form form {
+  margin-left: 1rem;
+  position: relative;
+  /* flex: 1; */
+  width: 92%;
+}
+.message-form form input {
+  padding: 0 10%;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1.7rem;
+  border: none;
+  width: 100%;
+  height: 90%;
+}
+.message-form form i {
+  z-index: 1;
+  position: absolute;
+  font-size: 2rem;
+}
+.message-form form .fa-smile {
+  left: 3%;
+}
+.message-form form i:last-child {
+  right: 3%;
+}
+
+.message-form .record-button {
+  margin: auto 0.2rem auto 0.7rem;
+  width: 3.8rem;
+  border-radius: 50%;
+  height: 3.8rem;
+  background-color: #4a8270;
+}
+.message-form .record-button:hover {
+  transform: scale(1.1);
+  background-color: #3b7261;
+}
+.message-form .record-button i {
+  color: white;
+}
+.emoji-items {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  height: 20rem;
+  width: 50%;
+  background-color: white;
+  border-radius: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-120%) scale(1, 0);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.showEmojis .emoji-items {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0%) scale(1);
+}
+.emoji-items ul {
+  width: 100%;
+  height: 100%;
+}
+.emoji-items ul li {
+  color: rgb(49, 49, 49);
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+.emoji-items ul > * {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.emoji-items ul > *:hover {
+  color: black;
+}
