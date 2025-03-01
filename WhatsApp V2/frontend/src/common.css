@@ -1,0 +1,80 @@
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #ff8000;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+button.block {
+  width: 100%;
+}
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+span {
+  font-size: 1.2rem;
+}
+.full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Xcenter {
+  justify-content: center;
+}
+.Ycenter {
+  align-items: center;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.pointer {
+  cursor: pointer;
+}
+.row.center {
+  justify-content: center;
+}
+.row.top {
+  align-items: flex-start;
+}
+.column {
+  flex-direction: column;
+}
+.round {
+  border-radius: 50%;
+}
+/* BORDERS */
+
+.bred {
+  border: 0.1rem solid red;
+}
+.bwhite {
+  border: 0.1rem solid white;
+}
+.bgrey {
+  border: 0.1rem solid grey;
+}
+.fs2 {
+  font-size: 2rem;
+}
+.fs3 {
+  font-size: 3rem;
+}
+.fs4 {
+  font-size: 4rem;
+}
